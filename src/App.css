@@ -1,38 +1,98 @@
-.App {
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffdf00;
+  margin-bottom: 1rem;
+}
+.header img {
+  max-width: 40%;
+}
+.header .header__title {
   text-align: center;
+  color: #f2f2f2;
+  font-weight: 900;
+  flex-grow: 1;
+  padding: 1rem;
+  font-size: 3rem;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+  max-width: 800px;
+  margin: 0rem auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.form input {
+  text-align: center;
+  border: none;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  outline: none;
+  height: 1.5rem;
+  font-size: 1rem;
+}
+.form input:first-child {
+  border-right: 1.5px solid silver;
+}
+.form button {
+  --background: #ffdf00;
+  background: var(--background);
+  font-family: inherit;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  grid-column: span 2;
+  font-size: inherit;
+  font-weight: 900;
+  border: none;
+  transition: all 0.4s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form button:hover {
+  --background: #ffe433;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.meme-container {
+  background: #880b88;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  position: relative;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.meme-container img {
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.meme-container .title {
+  width: 100%;
+  text-align: center;
+  color: rgb(250, 250, 250);
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+  font-size: 2.6rem;
+  font-weight: 900;
+  position: absolute;
+}
+.meme-container .top {
+  top: 20px;
+}
+.meme-container .bottom {
+  bottom: 20px;
+}
+@media screen and (max-width: 450px) {
+  .header .header__title {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (min-width: 800px) {
+  header img {
+    width: 250px;
   }
 }
